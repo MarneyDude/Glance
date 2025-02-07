@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glance | Catalog</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/catalog.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+      integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" type="image/svg+xml" href="./images/favicon.svg" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="container">
+        <p class="logotype">glance</p>
+        <div class="input-box">
+          <label for="search-input" class="visually-hidden">Search</label>
+          <input class="search" type="text" placeholder="Search" />
+          <svg class="svg-search" width="20" height="20">
+            <use href="./images/sprite.svg#search"></use>
+          </svg>
+        </div>
+      </div>
+    </header>
+    <main>
+      <!-- FILTER -->
+      <section class="filter section">
+        <div class="container">
+          <h1 class="visually-hidden">Filter</h1>
+          <nav class="filter-nav" aria-label="breadcrumb">
+            <ul
+              class="filter-list"
+              itemscope
+              itemtype="https://schema.org/BreadcrumbList"
+            >
+              <li
+                class="filter-item"
+                itemprop="itemListElement"
+                itemscope
+                itemtype="https://schema.org/ListItem"
+              >
+                <a href="./index.html" class="filter-link" itemprop="item">
+                  <span itemprop="name">Home</span>
+                </a>
+                <meta itemprop="position" content="1" />
+              </li>
+              <li class="filter-item">/</li>
+              <li
+                class="filter-item"
+                itemprop="itemListElement"
+                itemscope
+                itemtype="https://schema.org/ListItem"
+              >
+                <a href="./catalog.html" class="filter-link" itemprop="item">
+                  <span class="actually-place" itemprop="name">Catalog</span>
+                </a>
+                <meta itemprop="position" content="2" />
+              </li>
+            </ul>
+          </nav>
+          <div class="actually-catalog-box">
+            <a class="go-back" href="./index.html">
+              <svg class="actually-catalog-svg" width="20" height="20">
+                <use href="./images/sprite.svg#back"></use>
+              </svg>
+            </a>
+            <h2 class="filter-title">Smartphones</h2>
+          </div>
+          <ul class="filter-box">
+            <li class="filter-item-box-1">
+              <svg class="filter-svg" width="20" height="20">
+                <use href="./images/sprite.svg#arrows"></use>
+              </svg>
+            </li>
+            <li class="filter-item-box-2">
+              <svg class="filter-svg-act" width="20" height="20">
+                <use href="./images/sprite.svg#filter"></use>
+              </svg>
+              Filters
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- CATEGORY PRODUCTS -->
+      <section class="category-products">
+        <div class="container">
+          <ul class="products-list">
+            <li class="products-item">
+              <img class="product-img" src="./images/img-1.png" alt="phone" />
+              <div class="product-box">
+                <h3 class="product-title">Smartphone Apple iPhone 14 128GB</h3>
+                <ul class="about-list">
+                  <li class="about-item">Screen: 6.1"/2532x1170</li>
+                  <li class="about-item">Number of cores:: 6</li>
+                  <li class="about-item">Power supply unit: 20 W</li>
+                </ul>
+                <div class="stock-price">
+                  <p class="item-stock">In stock</p>
+                  <p class="item-price">2000 $</p>
+                </div>
+                <div class="item-basket-box">
+                  <div class="bgr-svg">
+                    <svg width="21" height="21">
+                      <use href="./images/sprite.svg#heart"></use>
+                    </svg>
+                  </div>
+                  <button class="share-button btn" type="button">
+                    To cart
+                  </button>
+                </div>
+              </div>
+            </li>
+            <li class="products-item">
+              <img class="product-img" src="./images/img-2.png" alt="phone" />
+              <div class="product-box">
+                <h3 class="product-title">Smartphone Apple iPhone 13 128GB</h3>
+                <ul class="about-list">
+                  <li class="about-item">Screen: 6.1"/2532x1170</li>
+                  <li class="about-item">Number of cores:: 6</li>
+                  <li class="about-item">Power supply unit: 20 W</li>
+                </ul>
+                <div class="stock-price">
+                  <p class="item-stock">In stock</p>
+                  <p class="item-price">2000 $</p>
+                </div>
+                <div class="item-basket-box">
+                  <div class="bgr-svg">
+                    <svg width="21" height="21">
+                      <use href="./images/sprite.svg#heart"></use>
+                    </svg>
+                  </div>
+                  <button class="share-button btn" type="button">
+                    To cart
+                  </button>
+                </div>
+              </div>
+            </li>
+            <li class="products-item">
+              <img class="product-img" src="./images/img-3.png" alt="phone" />
+              <div class="product-box">
+                <h3 class="product-title">Smartphone HONOR X8A 6/128GB</h3>
+                <ul class="about-list">
+                  <li class="about-item">Screen: 6.1"/2532x1170</li>
+                  <li class="about-item">Number of cores:: 6</li>
+                  <li class="about-item">Power supply unit: 20 W</li>
+                </ul>
+                <div class="stock-price">
+                  <p class="item-stock">In stock</p>
+                  <p class="item-price">2000 $</p>
+                </div>
+                <div class="item-basket-box">
+                  <div class="bgr-svg">
+                    <svg width="21" height="21">
+                      <use href="./images/sprite.svg#heart"></use>
+                    </svg>
+                  </div>
+                  <button class="share-button btn" type="button">
+                    To cart
+                  </button>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <!-- MENU -->
+    <div class="menu">
+      <div class="container">
+        <nav class="navigation">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="./index.html" class="nav-link">
+                <svg class="nav-icon" width="20" height="20">
+                  <use href="./images/sprite.svg#home"></use>
+                </svg>
+                Home
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="./catalog.html" class="nav-link">
+                <svg class="nav-icon" width="20" height="20">
+                  <use href="./images/sprite.svg#catalog"></use>
+                </svg>
+                Catalog
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link">
+                <svg class="nav-icon" width="20" height="20">
+                  <use href="./images/sprite.svg#basket"></use>
+                </svg>
+                Basket
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link">
+                <svg class="nav-icon" width="20" height="20">
+                  <use href="./images/sprite.svg#profile"></use>
+                </svg>
+                Profile
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </body>
+</html>
