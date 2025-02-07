@@ -21,28 +21,35 @@
   </head>
   <body>
     <!-- HEADER -->
-    <header class="header container">
-      <p class="logotype">glance</p>
-      <div class="input-box">
-        <label for="search-input" class="visually-hidden">Search</label>
-        <input class="search" type="text" placeholder="Search" />
-        <svg class="svg-search" width="20" height="20">
-          <use href="./images/sprite.svg#search"></use>
-        </svg>
+    <header class="header">
+      <div class="container">
+        <p class="logotype">glance</p>
+        <div class="input-box">
+          <label for="search-input" class="visually-hidden">Search</label>
+          <input class="search" type="text" placeholder="Search" />
+          <svg class="svg-search" width="20" height="20">
+            <use href="./images/sprite.svg#search"></use>
+          </svg>
+        </div>
       </div>
     </header>
 
     <main>
       <!-- SALES -->
-      <section class="sales container section">
-        <h1 class="visually-hidden"></h1>
-
-        <ul class="sale-list">
-          <li class="sale-item">
-            <img class="sale-img" src="./images/laptop-sale.png" alt="laptop" />
-            <p class="sale-text">Super price on all laptops</p>
-          </li>
-        </ul>
+      <section class="sales section">
+        <div class="container">
+          <h1 class="visually-hidden"></h1>
+          <ul class="sale-list">
+            <li class="sale-item">
+              <img
+                class="sale-img"
+                src="./images/laptop-sale.png"
+                alt="laptop"
+              />
+              <p class="sale-text">Super price on all laptops</p>
+            </li>
+          </ul>
+        </div>
       </section>
 
       <!-- CATALOG -->
@@ -51,19 +58,21 @@
           <h2 class="catalog-title">Catalog</h2>
           <ul class="catalog-list">
             <li class="catalog-item">
-              <img class="catalog-img" src="./images/phone.png" alt="phone" />
+              <svg class="catalog-svg" width="50" height="50">
+                <use href="./images/sprite.svg#phone"></use>
+              </svg>
               <p class="catalog-text">Phones</p>
             </li>
             <li class="catalog-item">
-              <img
-                class="catalog-img"
-                src="./images/speaker.png"
-                alt="speaker"
-              />
+              <svg class="catalog-svg" width="50" height="50">
+                <use href="./images/sprite.svg#speaker"></use>
+              </svg>
               <p class="catalog-text">Speakers</p>
             </li>
             <li class="catalog-item">
-              <img class="catalog-img" src="./images/computers.png" />
+              <svg class="catalog-svg" width="50" height="50">
+                <use href="./images/sprite.svg#computer"></use>
+              </svg>
               <p class="catalog-text">Computers</p>
             </li>
           </ul>
@@ -124,7 +133,7 @@
       </section>
     </main>
 
-    <footer class="footer section">
+    <footer class="footer">
       <div class="container">
         <nav class="header-navigation">
           <ul class="header-nav-list">
