@@ -316,11 +316,14 @@ p {
 /* #region MOBILE FOOTER  */
 
 footer {
-  position: sticky;
-  padding-top: 7px;
+  position: fixed;
   bottom: 0;
+  left: 0;
+  width: 100%;
   background-color: whitesmoke;
   border-top: 1px solid rgba(89, 0, 255, 0.151);
   box-shadow: rgba(127, 91, 196, 0.658) 0px 5px 15px;
+  padding: 7px 0;
+  transition: all 0.3s ease; /* Плавна анімація */
 }
 /* #endregion MOBILE FOOTER */
