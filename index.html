@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+      integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header container">
+      <p class="logotype">glance</p>
+      <div class="input-box">
+        <label for="search-input" class="visually-hidden">Search</label>
+        <input class="search" type="text" placeholder="Search" />
+        <svg class="svg-search" width="20" height="20">
+          <use href="/images/sprite.svg#search"></use>
+        </svg>
+      </div>
+    </header>
+
+    <main>
+      <!-- SALES -->
+      <section class="sales container section">
+        <h1 class="visually-hidden"></h1>
+
+        <ul class="sale-list">
+          <li class="sale-item">
+            <img class="sale-img" src="./images/laptop-sale.png" alt="laptop" />
+            <p class="sale-text">Super price on all laptops</p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- CATALOG -->
+      <section class="catalog section">
+        <div class="container">
+          <h2 class="catalog-title">Catalog</h2>
+          <ul class="catalog-list">
+            <li class="catalog-item">
+              <div class="img-box">
+                <img
+                  class="catalog-img phone"
+                  src="./images/phone.png"
+                  alt="phone"
+                />
+              </div>
+              <p class="catalog-text">Phones</p>
+            </li>
+            <li class="catalog-item">
+              <div class="img-box">
+                <img
+                  class="catalog-img speaker"
+                  src="./images/speaker.png"
+                  alt="speaker"
+                />
+              </div>
+              <p class="catalog-text">Speakers</p>
+            </li>
+            <li class="catalog-item">
+              <div class="img-box">
+                <img
+                  class="catalog-img laptop"
+                  src="./images/laptop-category.png"
+                />
+              </div>
+              <p class="catalog-text">Computers</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- SHARES -->
+      <section class="share section">
+        <div class="container">
+          <h2 class="share-title">Shares</h2>
+          <ul class="share-list">
+            <li class="share-item">
+              <img
+                class="share-img"
+                src="/images/share-phone.jpg"
+                alt="phone"
+              />
+              <div class="share-radio-set">
+                <input class="share-radio" type="radio" name="" id="" />
+                <input class="share-radio" type="radio" name="" id="" />
+                <input class="share-radio" type="radio" name="" id="" />
+              </div>
+              <h3 class="share-item-title">Smartphone Apple iPhone 13 128GB</h3>
+              <div class="share-price-box">
+                <p class="share-price">999 $</p>
+                <p class="share-price-actualy">1200 $</p>
+              </div>
+              <div class="share-like-box">
+                <p class="share-stock">In stock</p>
+                <svg class="share-like" width="21" height="17px">
+                  <use href="./images/sprite.svg#heart"></use>
+                </svg>
+              </div>
+              <button class="share-button" type="button">To Cart</button>
+            </li>
+            <li class="share-item">
+              <img
+                class="share-img"
+                src="/images/share-phone2.jpg"
+                alt="phone"
+              />
+              <div class="share-radio-set">
+                <input class="share-radio" type="radio" name="" id="" />
+                <input class="share-radio" type="radio" name="" id="" />
+                <input class="share-radio" type="radio" name="" id="" />
+              </div>
+              <h3 class="share-item-title">Smartphone Apple iPhone 12 64GB</h3>
+              <div class="share-price-box">
+                <p class="share-price">799 $</p>
+                <p class="share-price-actualy">1000 $</p>
+              </div>
+              <div class="share-like-box">
+                <p class="share-stock">In stock</p>
+                <svg class="share-like" width="21" height="17px">
+                  <use href="./images/sprite.svg#heart"></use>
+                </svg>
+              </div>
+              <button class="share-button" type="button">To Cart</button>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
