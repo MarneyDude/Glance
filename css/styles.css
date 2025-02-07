@@ -118,6 +118,7 @@ p {
   padding: 14px 0;
   padding-left: 48px;
   background-color: #dbdbdba8;
+  border: transparent;
 }
 
 .search:focus + .svg-search {
