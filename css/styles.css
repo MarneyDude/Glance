@@ -317,7 +317,8 @@ p {
 /* #region MOBILE FOOTER  */
 
 footer {
-  position: fixed;
+  position: sticky;
+  position: -webkit-sticky;
   bottom: 0;
   left: 0;
   width: 100%;
