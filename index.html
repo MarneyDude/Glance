@@ -98,11 +98,11 @@
                 src="./images/share-phone.png"
                 alt="phone"
               />
-              <div class="share-radio-set">
-                <input class="share-radio" type="radio" name="" id="" />
-                <input class="share-radio" type="radio" name="" id="" />
-                <input class="share-radio" type="radio" name="" id="" />
-              </div>
+              <ul class="share-radio-set">
+                <li class="share-radio-item"><a href=""></a></li>
+                <li class="share-radio-item"><a href=""></a></li>
+                <li class="share-radio-item"><a href=""></a></li>
+              </ul>
               <h3 class="share-item-title">Smartphone Apple iPhone 13 128GB</h3>
               <div class="share-price-box">
                 <p class="share-price">999 $</p>
@@ -110,19 +110,21 @@
               </div>
               <div class="share-like-box">
                 <p class="share-stock">In stock</p>
-                <svg class="share-like" width="21" height="17px">
-                  <use href="./images/sprite.svg#heart"></use>
-                </svg>
+                <div class="bgr-svg">
+                  <svg class="share-like" width="21" height="17px">
+                    <use href="./images/sprite.svg#heart"></use>
+                  </svg>
+                </div>
               </div>
               <button class="share-button" type="button">To Cart</button>
             </li>
             <li class="share-item">
               <img class="share-img" src="./images/share-phone2.png" />
-              <div class="share-radio-set">
-                <input class="share-radio" type="radio" name="" id="" />
-                <input class="share-radio" type="radio" name="" id="" />
-                <input class="share-radio" type="radio" name="" id="" />
-              </div>
+              <ul class="share-radio-set">
+                <li class="share-radio-item"><a href=""></a></li>
+                <li class="share-radio-item"><a href=""></a></li>
+                <li class="share-radio-item"><a href=""></a></li>
+              </ul>
               <h3 class="share-item-title">Smartphone Apple iPhone 12 64GB</h3>
               <div class="share-price-box">
                 <p class="share-price">799 $</p>
@@ -130,9 +132,11 @@
               </div>
               <div class="share-like-box">
                 <p class="share-stock">In stock</p>
-                <svg class="share-like" width="21" height="17px">
-                  <use href="./images/sprite.svg#heart"></use>
-                </svg>
+                <div class="bgr-svg">
+                  <svg class="share-like" width="21" height="17px">
+                    <use href="./images/sprite.svg#heart"></use>
+                  </svg>
+                </div>
               </div>
               <button class="share-button" type="button">To Cart</button>
             </li>
@@ -140,6 +144,109 @@
         </div>
       </section>
     </main>
+    <!-- MODAL -->
+    <div class="modal-catalog" id="modal-catalog">
+      <div class="modal-backdrop">
+        <ul class="modal-catalog-list">
+          <li class="modal-catalog-item">
+            <a href="" class="modal-catalog-link">
+              <svg class="modal-catalog-svg" width="20" height="20">
+                <use href="./images/sprite.svg#smartphone"></use>
+              </svg>
+              Smartphones & Mobile Phones</a
+            >
+          </li>
+          <li class="modal-catalog-item">
+            <a href="" class="modal-catalog-link">
+              <svg class="modal-catalog-svg" width="20" height="20">
+                <use href="./images/sprite.svg#watch"></use>
+              </svg>
+              Smartwatches & Wearables</a
+            >
+          </li>
+          <li class="modal-catalog-item">
+            <a href="" class="modal-catalog-link">
+              <svg class="modal-catalog-svg" width="20" height="20">
+                <use href="./images/sprite.svg#tv"></use>
+              </svg>
+              TVs & Accessories</a
+            >
+          </li>
+          <li class="modal-catalog-item">
+            <a href="" class="modal-catalog-link">
+              <svg class="modal-catalog-svg" width="20" height="20">
+                <use href="./images/sprite.svg#audio"></use>
+              </svg>
+              Audio & Sound Systems</a
+            >
+          </li>
+          <li class="modal-catalog-item">
+            <a href="" class="modal-catalog-link">
+              <svg class="modal-catalog-svg" width="20" height="20">
+                <use href="./images/sprite.svg#hair"></use>
+              </svg>
+              Hair Dryers & Styling Tools</a
+            >
+          </li>
+          <li class="modal-catalog-item">
+            <a href="" class="modal-catalog-link">
+              <svg class="modal-catalog-svg" width="20" height="20">
+                <use href="./images/sprite.svg#console"></use>
+              </svg>
+              Gaming Consoles & Accessories</a
+            >
+          </li>
+          <li class="modal-catalog-item">
+            <a href="" class="modal-catalog-link">
+              <svg class="modal-catalog-svg" width="20" height="20">
+                <use href="./images/sprite.svg#oven"></use>
+              </svg>
+              Stoves & Cooktops
+            </a>
+          </li>
+          <li class="modal-catalog-item">
+            <a href="" class="modal-catalog-link">
+              <svg class="modal-catalog-svg" width="20" height="20">
+                <use href="./images/sprite.svg#travel"></use>
+              </svg>
+              Tourism & Travel
+            </a>
+          </li>
+          <li class="modal-catalog-item">
+            <a href="" class="modal-catalog-link">
+              <svg class="modal-catalog-svg" width="20" height="20">
+                <use href="./images/sprite.svg#home-living"></use>
+              </svg>
+              Home & Living
+            </a>
+          </li>
+          <li class="modal-catalog-item">
+            <a href="" class="modal-catalog-link">
+              <svg class="modal-catalog-svg" width="20" height="20">
+                <use href="./images/sprite.svg#children"></use>
+              </svg>
+              Children's Products
+            </a>
+          </li>
+          <li class="modal-catalog-item">
+            <a href="" class="modal-catalog-link">
+              <svg class="modal-catalog-svg" width="20" height="20">
+                <use href="./images/sprite.svg#perfumes"></use>
+              </svg>
+              Perfumes & Fragrances
+            </a>
+          </li>
+          <li class="modal-catalog-item">
+            <a href="" class="modal-catalog-link">
+              <svg class="modal-catalog-svg" width="20" height="20">
+                <use href="./images/sprite.svg#sale"></use>
+              </svg>
+              Sales & Promotions
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
     <div class="menu">
       <div class="container">
         <nav class="navigation">
@@ -153,7 +260,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">
+              <a href="#" class="nav-link" id="catalog-link">
                 <svg class="nav-icon" width="20" height="20">
                   <use href="./images/sprite.svg#catalog"></use>
                 </svg>
@@ -180,5 +287,6 @@
         </nav>
       </div>
     </div>
+    <script type="module" src="./js/app.js"></script>
   </body>
 </html>
