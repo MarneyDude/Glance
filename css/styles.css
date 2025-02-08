@@ -12,6 +12,7 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   margin: 0;
+  padding-bottom: 61px;
 }
 
 * {
@@ -186,14 +187,19 @@ p {
 .catalog-item {
   min-width: 0;
   flex: 1;
-  padding: 30px 10px;
   background-color: #ffffff;
   border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+}
+
+.catalog-link {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   gap: 10px;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+  padding: 25px 10px;
+  width: 100%;
 }
 
 .catalog-svg {
