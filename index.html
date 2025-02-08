@@ -147,6 +147,21 @@
     <!-- MODAL -->
     <div class="modal-catalog" id="modal-catalog">
       <div class="modal-backdrop">
+        <div class="container-row">
+          <form action="" class="input-box modal-search">
+            <label for="search-input " class="visually-hidden">Search</label>
+            <input
+              class="search modal-search-input"
+              type="text"
+              placeholder="Search"
+            />
+            <button class="bgr-svg-modal">
+              <svg class="modal-svg-search" width="20" height="20">
+                <use href="./images/sprite.svg#search"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
         <ul class="modal-catalog-list">
           <li class="modal-catalog-item">
             <a href="" class="modal-catalog-link">
@@ -252,7 +267,7 @@
         <nav class="navigation">
           <ul class="nav-list">
             <li class="nav-item">
-              <a href="./index.html" class="nav-link">
+              <a href="./index.html" class="nav-link" id="home-link">
                 <svg class="nav-icon" width="20" height="20">
                   <use href="./images/sprite.svg#home"></use>
                 </svg>
@@ -269,7 +284,7 @@
             </li>
             <li class="nav-item">
               <a href="" class="nav-link">
-                <svg class="nav-icon" width="20" height="20">
+                <svg class="nav-icon" width="20" height="20" id="basket-link">
                   <use href="./images/sprite.svg#basket"></use>
                 </svg>
                 Basket
@@ -277,7 +292,7 @@
             </li>
             <li class="nav-item">
               <a href="" class="nav-link">
-                <svg class="nav-icon" width="20" height="20">
+                <svg class="nav-icon" width="20" height="20" id="profile-link">
                   <use href="./images/sprite.svg#profile"></use>
                 </svg>
                 Profile
