@@ -199,6 +199,9 @@ p {
   gap: 10px;
   padding: 25px 10px;
 }
+#catalog-link {
+  cursor: pointer;
+}
 .catalog-svg {
   fill: rgb(0, 161, 201);
 }
@@ -475,8 +478,8 @@ p {
   height: 100%;
   z-index: 2;
   pointer-events: none;
+  transition: transform 350ms cubic-bezier(0.51, 0.92, 0.24, 1.15);
   transform: translateY(100%);
-  transition: transform 350ms cubic-bezier(0.35, 0.56, 0.36, 0.58);
 }
 
 .modal-svg-search {
@@ -514,11 +517,6 @@ p {
 .menu-is-open {
   pointer-events: all;
   transform: translateY(0%);
-}
-.menu-is-closing {
-  transform: translateY(100%);
-  transition: transform 350ms cubic-bezier(0.35, 0.56, 0.36, 0.58);
-  pointer-events: none;
 }
 
 .container-row {
