@@ -215,6 +215,7 @@ p {
 }
 
 .catalog-link {
+  color: #000;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -498,7 +499,8 @@ p {
 /* #endregion MOBILE MENU */
 
 /* #region CATALOG MENU */
-.modal-catalog {
+
+.modal-overlay {
   background-color: rgba(255, 255, 255);
   position: fixed;
   top: 0;
@@ -510,11 +512,36 @@ p {
   pointer-events: none;
   transition: transform 400ms cubic-bezier(0.51, 0.5, 0.24, 1.15);
   transform: translateY(100%);
+  overflow-y: auto;
+  padding-bottom: 61px;
+}
+.modal {
+}
+.container-row {
+  padding-top: 16px;
+  display: flex;
+  justify-content: center;
 }
 
+.modal-search {
+  width: 80%;
+}
+
+.modal-search-input {
+}
+.bgr-svg-modal {
+}
 .modal-svg-search {
-  transition: fill 0.2s ease-in-out;
-  fill: rgba(255, 255, 255, 0.911);
+}
+.modal-catalog-list {
+}
+.modal-catalog-item {
+}
+.modal-catalog-link {
+}
+.modal-catalog-svg {
+}
+.modal-catalog-svg-2 {
 }
 
 .bgr-svg-modal {
@@ -537,25 +564,15 @@ p {
   pointer-events: none;
   z-index: 999;
 }
-.modal-backdrop {
-  position: relative;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+
+.modal-svg-search {
+  transition: fill 0.2s ease-in-out;
+  fill: rgba(255, 255, 255, 0.911);
 }
 
 .menu-is-open {
   pointer-events: all;
   transform: translateY(0%);
-}
-
-.container-row {
-  padding-top: 16px;
-  display: flex;
-  justify-content: center;
-}
-.modal-search {
-  width: 80%;
 }
 
 .modal-catalog-item a::before {
