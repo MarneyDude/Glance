@@ -199,13 +199,14 @@ p {
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   gap: 16px;
+  padding: 20px 0;
 }
 .catalog-list::-webkit-scrollbar {
   display: none; /* Chrome, Safari */
 }
 
 .catalog-item {
-  min-width: 171.5px;
+  min-width: 163.5px;
   flex-shrink: 0;
   scroll-snap-align: start;
   background-color: #ffffff;
