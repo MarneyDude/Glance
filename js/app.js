@@ -17,10 +17,7 @@ link.addEventListener("click", (event) => {
 homeLink.addEventListener("click", (event) => {
   event.preventDefault();
 
-  if (modalCatalog.classList.contains("menu-is-open")) {
-    document.body.style.overflow = "auto";
-  } else {
-    document.body.style.overflow = "hidden";
-  }
+  document.body.style.overflow = "auto";
+
   modalCatalog.classList.remove("menu-is-open");
 });
