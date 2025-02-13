@@ -153,6 +153,10 @@ p {
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
 }
+.sale-list::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
 .sale-item {
   flex-shrink: 0;
   position: relative;
@@ -195,6 +199,9 @@ p {
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   gap: 16px;
+}
+.catalog-list::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
 }
 
 .catalog-item {
@@ -247,6 +254,9 @@ p {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
+}
+.share-list::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
 }
 
 .share-item {
