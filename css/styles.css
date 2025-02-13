@@ -145,7 +145,16 @@ p {
   padding-top: 40px;
 }
 
+.sale-list {
+  gap: 10px;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
 .sale-item {
+  flex-shrink: 0;
   position: relative;
   display: flex;
   background-color: black;
@@ -153,6 +162,7 @@ p {
   max-width: 275px;
   justify-content: end;
   padding: 20px 11px 20px 55px;
+  scroll-snap-align: start;
 }
 
 .sale-img {
@@ -180,12 +190,17 @@ p {
 
 .catalog-list {
   display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
   gap: 16px;
 }
 
 .catalog-item {
-  min-width: 0;
-  flex: 1;
+  min-width: 171.5px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
   background-color: #ffffff;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
@@ -224,14 +239,20 @@ p {
 
 .share-list {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-wrap: nowrap;
   border-top: 1px solid rgb(0, 161, 201);
   padding-top: 20px;
+
+  gap: 50px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
 }
 
 .share-item {
-  width: calc((85%) / 2);
+  width: calc((100% - 50px) / 2);
+  flex-shrink: 0;
+  scroll-snap-align: start;
 }
 
 .share-img {
