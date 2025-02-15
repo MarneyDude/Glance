@@ -21,197 +21,176 @@
     <link rel="icon" type="image/svg+xml" href="./images/favicon.svg" />
   </head>
   <body>
-    <!-- HEADER -->
     <header class="header">
       <div class="container">
-        <p class="logotype">glance</p>
-        <div class="input-box">
+        <p class="header__logotype">glance</p>
+        <div class="header__input-box">
           <label for="search-input" class="visually-hidden">Search</label>
-          <input class="search" type="text" placeholder="Search" />
-          <svg class="svg-search" width="20" height="20">
+          <input class="header__search" type="text" placeholder="Search" />
+          <svg class="header__search-icon" width="20" height="20">
             <use href="./images/sprite.svg#search"></use>
           </svg>
         </div>
       </div>
     </header>
 
-    <main>
+    <main class="main">
       <!-- SALES -->
       <section class="sales section">
-        <div class="container">
-          <h1 class="visually-hidden"></h1>
-          <ul class="sale-list">
-            <li class="sale-item">
-              <img
-                class="sale-img"
-                src="./images/laptop-sale.png"
-                alt="laptop"
-              />
-              <p class="sale-text">Super price on all laptops</p>
-            </li>
-            <li class="sale-item">
-              <img
-                class="sale-img"
-                src="./images/laptop-sale.png"
-                alt="laptop"
-              />
-              <p class="sale-text">Super price on all laptops</p>
-            </li>
-            <li class="sale-item">
-              <img
-                class="sale-img"
-                src="./images/laptop-sale.png"
-                alt="laptop"
-              />
-              <p class="sale-text">Super price on all laptops</p>
-            </li>
-            <li class="sale-item">
-              <img
-                class="sale-img"
-                src="./images/laptop-sale.png"
-                alt="laptop"
-              />
-              <p class="sale-text">Super price on all laptops</p>
-            </li>
-            <li class="sale-item">
-              <img
-                class="sale-img"
-                src="./images/laptop-sale.png"
-                alt="laptop"
-              />
-              <p class="sale-text">Super price on all laptops</p>
-            </li>
-            <li class="sale-item">
-              <img
-                class="sale-img"
-                src="./images/laptop-sale.png"
-                alt="laptop"
-              />
-              <p class="sale-text">Super price on all laptops</p>
-            </li>
-            <li class="sale-item">
-              <img
-                class="sale-img"
-                src="./images/laptop-sale.png"
-                alt="laptop"
-              />
-              <p class="sale-text">Super price on all laptops</p>
-            </li>
-            <li class="sale-item">
-              <img
-                class="sale-img"
-                src="./images/laptop-sale.png"
-                alt="laptop"
-              />
-              <p class="sale-text">Super price on all laptops</p>
-            </li>
-            <li class="sale-item">
-              <img
-                class="sale-img"
-                src="./images/laptop-sale.png"
-                alt="laptop"
-              />
-              <p class="sale-text">Super price on all laptops</p>
-            </li>
-          </ul>
-        </div>
+        <h1 class="visually-hidden">Sales</h1>
+        <ul class="sales__list">
+          <li class="sales__item">
+            <img
+              class="sales__image"
+              src="./images/vertical-banners-sales-6.jpg"
+              alt="laptop"
+            />
+          </li>
+          <li class="sales__item">
+            <img
+              class="sales__image"
+              src="./images/vertical-banners-sales.jpg"
+              alt="laptop"
+            />
+          </li>
+          <li class="sales__item">
+            <img
+              class="sales__image"
+              src="./images/vertical-banners-sales-7.jpg"
+              alt="laptop"
+            />
+          </li>
+          <li class="sales__item">
+            <img
+              class="sales__image"
+              src="./images/vertical-banners-sales-2.jpg"
+              alt="laptop"
+            />
+          </li>
+          <li class="sales__item">
+            <img
+              class="sales__image"
+              src="./images/vertical-banners-sales-5.jpg"
+              alt="laptop"
+            />
+          </li>
+          <li class="sales__item">
+            <img
+              class="sales__image"
+              src="./images/vertical-banners-sales-3.jpg"
+              alt="laptop"
+            />
+          </li>
+          <li class="sales__item">
+            <img
+              class="sales__image"
+              src="./images/vertical-banners-sales-4.jpg"
+              alt="laptop"
+            />
+          </li>
+        </ul>
       </section>
 
       <!-- CATALOG -->
       <section class="catalog section">
         <div class="container">
-          <h2 class="catalog-title">Catalog</h2>
-          <ul class="catalog-list">
-            <li class="catalog-item">
-              <a class="catalog-link" href="./catalog.html">
-                <svg class="catalog-svg" width="50" height="50">
+          <h2 class="catalog__title">Catalog</h2>
+          <ul class="catalog__list">
+            <li class="catalog__item">
+              <a class="catalog__link" href="./catalog.html">
+                <svg class="catalog__icon" width="50" height="50">
                   <use href="./images/sprite.svg#smartphone"></use>
                 </svg>
                 Phones
               </a>
             </li>
-            <li class="catalog-item">
-              <a href="./catalog.html" class="catalog-link">
-                <svg class="catalog-svg" width="50" height="50">
+            <li class="catalog__item">
+              <a class="catalog__link" href="./catalog.html">
+                <svg class="catalog__icon" width="50" height="50">
                   <use href="./images/sprite.svg#watch"></use>
                 </svg>
                 Smartwatches
               </a>
             </li>
-            <li class="catalog-item">
-              <a href="./catalog.html" class="catalog-link">
-                <svg class="catalog-svg" width="50" height="50">
+            <li class="catalog__item">
+              <a class="catalog__link" href="./catalog.html">
+                <svg class="catalog__icon" width="50" height="50">
                   <use href="./images/sprite.svg#tv"></use>
                 </svg>
                 TVs & Accessories
               </a>
             </li>
-            <li class="catalog-item">
-              <a class="catalog-link" href="./catalog.html">
-                <svg class="catalog-svg" width="50" height="50">
+            <li class="catalog__item">
+              <a class="catalog__link" href="./catalog.html">
+                <svg class="catalog__icon" width="50" height="50">
                   <use href="./images/sprite.svg#audio"></use>
                 </svg>
-
                 Audio & Sound
               </a>
             </li>
-            <li class="catalog-item">
-              <a href="./catalog.html" class="catalog-link">
-                <svg class="catalog-svg" width="50" height="50">
+            <li class="catalog__item">
+              <a class="catalog__link" href="./catalog.html">
+                <svg class="catalog__icon" width="50" height="50">
                   <use href="./images/sprite.svg#hair"></use>
                 </svg>
-
                 Styling Tools
               </a>
             </li>
-            <li class="catalog-item">
-              <a href="./catalog.html" class="catalog-link">
-                <svg class="catalog-svg" width="50" height="50">
+            <li class="catalog__item">
+              <a class="catalog__link" href="./catalog.html">
+                <svg class="catalog__icon" width="50" height="50">
                   <use href="./images/sprite.svg#console"></use>
                 </svg>
                 Gaming Consoles
               </a>
             </li>
-
-            <li class="catalog-item">
-              <a class="catalog-link" href="./catalog.html">
-                <svg class="catalog-svg" width="50" height="50">
+            <li class="catalog__item">
+              <a class="catalog__link" href="./catalog.html">
+                <svg class="catalog__icon" width="50" height="50">
                   <use href="./images/sprite.svg#oven"></use>
                 </svg>
                 Stoves & Cooktops
               </a>
             </li>
-            <li class="catalog-item">
-              <a class="catalog-link" href="./catalog.html">
-                <svg class="catalog-svg" width="50" height="50">
+            <li class="catalog__item">
+              <a class="catalog__link" href="./catalog.html">
+                <svg class="catalog__icon" width="50" height="50">
                   <use href="./images/sprite.svg#travel"></use>
                 </svg>
                 Tourism & Travel
               </a>
             </li>
-            <li class="catalog-item">
-              <a class="catalog-link" href="./catalog.html">
-                <svg class="catalog-svg" width="50" height="50">
+            <li class="catalog__item">
+              <a class="catalog__link" href="./catalog.html">
+                <svg class="catalog__icon" width="50" height="50">
                   <use href="./images/sprite.svg#home-living"></use>
                 </svg>
-
                 Home & Living
               </a>
             </li>
-            <li class="catalog-item">
-              <a class="catalog-link" href="./catalog.html">
-                <svg class="catalog-svg" width="50" height="50">
+            <li class="catalog__item">
+              <a class="catalog__link" href="./catalog.html">
+                <svg class="catalog__icon" width="50" height="50">
                   <use href="./images/sprite.svg#children"></use>
                 </svg>
                 Children's Products
               </a>
             </li>
-            <li class="catalog-item">
-              <a class="catalog-link" href="./catalog.html">
-                <svg class="catalog-svg" width="50" height="50">
+
+            <li class="catalog__item">
+              <a class="catalog__link" href="./catalog.html">
+                <svg class="catalog__icon" width="50" height="50">
                   <use href="./images/sprite.svg#perfumes"></use>
                 </svg>
                 Perfumes
+              </a>
+            </li>
+            <li class="catalog__item">
+              <a class="catalog__link" href="./catalog.html">
+                <svg class="catalog__icon" width="50" height="50">
+                  <use href="./images/sprite.svg#sale"></use>
+                </svg>
+                Sales & Promotions
               </a>
             </li>
           </ul>
@@ -219,363 +198,420 @@
       </section>
 
       <!-- SHARES -->
-      <section class="share section">
+      <section class="shares section">
         <div class="container">
-          <h2 class="share-title">Shares</h2>
-          <ul class="share-list">
-            <li class="share-item">
+          <h2 class="shares__title">Shares</h2>
+          <ul class="shares__list">
+            <li class="shares__item">
               <img
-                class="share-img"
+                class="shares__image"
                 src="./images/share-phone.png"
                 alt="phone"
               />
-              <ul class="share-radio-set">
-                <li class="share-radio-item"><a href=""></a></li>
-                <li class="share-radio-item"><a href=""></a></li>
-                <li class="share-radio-item"><a href=""></a></li>
+              <ul class="shares__color-list">
+                <li class="shares__color-item">
+                  <a href="#" class="shares__color-link"></a>
+                </li>
+                <li class="shares__color-item">
+                  <a href="#" class="shares__color-link"></a>
+                </li>
+                <li class="shares__color-item">
+                  <a href="#" class="shares__color-link"></a>
+                </li>
               </ul>
-              <h3 class="share-item-title">Smartphone Apple iPhone 13 128GB</h3>
-              <div class="share-price-box">
-                <p class="share-price">999 $</p>
-                <p class="share-price-actualy">1200 $</p>
+              <h3 class="shares__name">Smartphone Apple iPhone 13 128GB</h3>
+              <div class="shares__price-box">
+                <p class="shares__price shares__price--discount">999 $</p>
+                <p class="shares__price shares__price--original">1200 $</p>
               </div>
-              <div class="share-like-box">
-                <p class="share-stock">In stock</p>
-                <div class="bgr-svg">
-                  <svg class="share-like" width="21" height="17px">
-                    <use href="./images/sprite.svg#heart"></use>
-                  </svg>
-                </div>
+              <div class="shares__info">
+                <p class="shares__stock">In stock</p>
+                <svg class="shares__like-icon" width="21" height="17px">
+                  <use href="./images/sprite.svg#heart"></use>
+                </svg>
               </div>
-              <button class="share-button" type="button">To Cart</button>
+              <button class="shares__button" type="button">To Cart</button>
             </li>
-            <li class="share-item">
-              <img class="share-img" src="./images/share-phone2.png" />
-              <ul class="share-radio-set">
-                <li class="share-radio-item"><a href=""></a></li>
-                <li class="share-radio-item"><a href=""></a></li>
-                <li class="share-radio-item"><a href=""></a></li>
-              </ul>
-              <h3 class="share-item-title">Smartphone Apple iPhone 12 64GB</h3>
-              <div class="share-price-box">
-                <p class="share-price">799 $</p>
-                <p class="share-price-actualy">1000 $</p>
-              </div>
-              <div class="share-like-box">
-                <p class="share-stock">In stock</p>
-                <div class="bgr-svg">
-                  <svg class="share-like" width="21" height="17px">
-                    <use href="./images/sprite.svg#heart"></use>
-                  </svg>
-                </div>
-              </div>
-              <button class="share-button" type="button">To Cart</button>
-            </li>
-            <li class="share-item">
+            <li class="shares__item">
               <img
-                class="share-img"
+                class="shares__image"
                 src="./images/share-phone.png"
                 alt="phone"
               />
-              <ul class="share-radio-set">
-                <li class="share-radio-item"><a href=""></a></li>
-                <li class="share-radio-item"><a href=""></a></li>
-                <li class="share-radio-item"><a href=""></a></li>
+              <ul class="shares__color-list">
+                <li class="shares__color-item">
+                  <a href="#" class="shares__color-link"></a>
+                </li>
+                <li class="shares__color-item">
+                  <a href="#" class="shares__color-link"></a>
+                </li>
+                <li class="shares__color-item">
+                  <a href="#" class="shares__color-link"></a>
+                </li>
               </ul>
-              <h3 class="share-item-title">Smartphone Apple iPhone 13 128GB</h3>
-              <div class="share-price-box">
-                <p class="share-price">999 $</p>
-                <p class="share-price-actualy">1200 $</p>
+              <h3 class="shares__name">Smartphone Apple iPhone 13 128GB</h3>
+              <div class="shares__price-box">
+                <p class="shares__price shares__price--discount">999 $</p>
+                <p class="shares__price shares__price--original">1200 $</p>
               </div>
-              <div class="share-like-box">
-                <p class="share-stock">In stock</p>
-                <div class="bgr-svg">
-                  <svg class="share-like" width="21" height="17px">
-                    <use href="./images/sprite.svg#heart"></use>
-                  </svg>
-                </div>
+              <div class="shares__info">
+                <p class="shares__stock">In stock</p>
+                <svg class="shares__like-icon" width="21" height="17px">
+                  <use href="./images/sprite.svg#heart"></use>
+                </svg>
               </div>
-              <button class="share-button" type="button">To Cart</button>
+              <button class="shares__button" type="button">To Cart</button>
             </li>
-            <li class="share-item">
+            <li class="shares__item">
               <img
-                class="share-img"
+                class="shares__image"
                 src="./images/share-phone.png"
                 alt="phone"
               />
-              <ul class="share-radio-set">
-                <li class="share-radio-item"><a href=""></a></li>
-                <li class="share-radio-item"><a href=""></a></li>
-                <li class="share-radio-item"><a href=""></a></li>
+              <ul class="shares__color-list">
+                <li class="shares__color-item">
+                  <a href="#" class="shares__color-link"></a>
+                </li>
+                <li class="shares__color-item">
+                  <a href="#" class="shares__color-link"></a>
+                </li>
+                <li class="shares__color-item">
+                  <a href="#" class="shares__color-link"></a>
+                </li>
               </ul>
-              <h3 class="share-item-title">Smartphone Apple iPhone 13 128GB</h3>
-              <div class="share-price-box">
-                <p class="share-price">999 $</p>
-                <p class="share-price-actualy">1200 $</p>
+              <h3 class="shares__name">Smartphone Apple iPhone 13 128GB</h3>
+              <div class="shares__price-box">
+                <p class="shares__price shares__price--discount">999 $</p>
+                <p class="shares__price shares__price--original">1200 $</p>
               </div>
-              <div class="share-like-box">
-                <p class="share-stock">In stock</p>
-                <div class="bgr-svg">
-                  <svg class="share-like" width="21" height="17px">
-                    <use href="./images/sprite.svg#heart"></use>
-                  </svg>
-                </div>
+              <div class="shares__info">
+                <p class="shares__stock">In stock</p>
+                <svg class="shares__like-icon" width="21" height="17px">
+                  <use href="./images/sprite.svg#heart"></use>
+                </svg>
               </div>
-              <button class="share-button" type="button">To Cart</button>
+              <button class="shares__button" type="button">To Cart</button>
             </li>
-            <li class="share-item">
+            <li class="shares__item">
               <img
-                class="share-img"
+                class="shares__image"
                 src="./images/share-phone.png"
                 alt="phone"
               />
-              <ul class="share-radio-set">
-                <li class="share-radio-item"><a href=""></a></li>
-                <li class="share-radio-item"><a href=""></a></li>
-                <li class="share-radio-item"><a href=""></a></li>
+              <ul class="shares__color-list">
+                <li class="shares__color-item">
+                  <a href="#" class="shares__color-link"></a>
+                </li>
+                <li class="shares__color-item">
+                  <a href="#" class="shares__color-link"></a>
+                </li>
+                <li class="shares__color-item">
+                  <a href="#" class="shares__color-link"></a>
+                </li>
               </ul>
-              <h3 class="share-item-title">Smartphone Apple iPhone 13 128GB</h3>
-              <div class="share-price-box">
-                <p class="share-price">999 $</p>
-                <p class="share-price-actualy">1200 $</p>
+              <h3 class="shares__name">Smartphone Apple iPhone 13 128GB</h3>
+              <div class="shares__price-box">
+                <p class="shares__price shares__price--discount">999 $</p>
+                <p class="shares__price shares__price--original">1200 $</p>
               </div>
-              <div class="share-like-box">
-                <p class="share-stock">In stock</p>
-                <div class="bgr-svg">
-                  <svg class="share-like" width="21" height="17px">
-                    <use href="./images/sprite.svg#heart"></use>
-                  </svg>
-                </div>
+              <div class="shares__info">
+                <p class="shares__stock">In stock</p>
+                <svg class="shares__like-icon" width="21" height="17px">
+                  <use href="./images/sprite.svg#heart"></use>
+                </svg>
               </div>
-              <button class="share-button" type="button">To Cart</button>
+              <button class="shares__button" type="button">To Cart</button>
             </li>
-            <li class="share-item">
+            <li class="shares__item">
               <img
-                class="share-img"
+                class="shares__image"
                 src="./images/share-phone.png"
                 alt="phone"
               />
-              <ul class="share-radio-set">
-                <li class="share-radio-item"><a href=""></a></li>
-                <li class="share-radio-item"><a href=""></a></li>
-                <li class="share-radio-item"><a href=""></a></li>
+              <ul class="shares__color-list">
+                <li class="shares__color-item">
+                  <a href="#" class="shares__color-link"></a>
+                </li>
+                <li class="shares__color-item">
+                  <a href="#" class="shares__color-link"></a>
+                </li>
+                <li class="shares__color-item">
+                  <a href="#" class="shares__color-link"></a>
+                </li>
               </ul>
-              <h3 class="share-item-title">Smartphone Apple iPhone 13 128GB</h3>
-              <div class="share-price-box">
-                <p class="share-price">999 $</p>
-                <p class="share-price-actualy">1200 $</p>
+              <h3 class="shares__name">Smartphone Apple iPhone 13 128GB</h3>
+              <div class="shares__price-box">
+                <p class="shares__price shares__price--discount">999 $</p>
+                <p class="shares__price shares__price--original">1200 $</p>
               </div>
-              <div class="share-like-box">
-                <p class="share-stock">In stock</p>
-                <div class="bgr-svg">
-                  <svg class="share-like" width="21" height="17px">
-                    <use href="./images/sprite.svg#heart"></use>
-                  </svg>
-                </div>
+              <div class="shares__info">
+                <p class="shares__stock">In stock</p>
+                <svg class="shares__like-icon" width="21" height="17px">
+                  <use href="./images/sprite.svg#heart"></use>
+                </svg>
               </div>
-              <button class="share-button" type="button">To Cart</button>
+              <button class="shares__button" type="button">To Cart</button>
             </li>
-            <li class="share-item">
+            <li class="shares__item">
               <img
-                class="share-img"
+                class="shares__image"
                 src="./images/share-phone.png"
                 alt="phone"
               />
-              <ul class="share-radio-set">
-                <li class="share-radio-item"><a href=""></a></li>
-                <li class="share-radio-item"><a href=""></a></li>
-                <li class="share-radio-item"><a href=""></a></li>
+              <ul class="shares__color-list">
+                <li class="shares__color-item">
+                  <a href="#" class="shares__color-link"></a>
+                </li>
+                <li class="shares__color-item">
+                  <a href="#" class="shares__color-link"></a>
+                </li>
+                <li class="shares__color-item">
+                  <a href="#" class="shares__color-link"></a>
+                </li>
               </ul>
-              <h3 class="share-item-title">Smartphone Apple iPhone 13 128GB</h3>
-              <div class="share-price-box">
-                <p class="share-price">999 $</p>
-                <p class="share-price-actualy">1200 $</p>
+              <h3 class="shares__name">Smartphone Apple iPhone 13 128GB</h3>
+              <div class="shares__price-box">
+                <p class="shares__price shares__price--discount">999 $</p>
+                <p class="shares__price shares__price--original">1200 $</p>
               </div>
-              <div class="share-like-box">
-                <p class="share-stock">In stock</p>
-                <div class="bgr-svg">
-                  <svg class="share-like" width="21" height="17px">
-                    <use href="./images/sprite.svg#heart"></use>
-                  </svg>
-                </div>
+              <div class="shares__info">
+                <p class="shares__stock">In stock</p>
+                <svg class="shares__like-icon" width="21" height="17px">
+                  <use href="./images/sprite.svg#heart"></use>
+                </svg>
               </div>
-              <button class="share-button" type="button">To Cart</button>
+              <button class="shares__button" type="button">To Cart</button>
             </li>
-            <li class="share-item">
+            <li class="shares__item">
               <img
-                class="share-img"
+                class="shares__image"
                 src="./images/share-phone.png"
                 alt="phone"
               />
-              <ul class="share-radio-set">
-                <li class="share-radio-item"><a href=""></a></li>
-                <li class="share-radio-item"><a href=""></a></li>
-                <li class="share-radio-item"><a href=""></a></li>
+              <ul class="shares__color-list">
+                <li class="shares__color-item">
+                  <a href="#" class="shares__color-link"></a>
+                </li>
+                <li class="shares__color-item">
+                  <a href="#" class="shares__color-link"></a>
+                </li>
+                <li class="shares__color-item">
+                  <a href="#" class="shares__color-link"></a>
+                </li>
               </ul>
-              <h3 class="share-item-title">Smartphone Apple iPhone 13 128GB</h3>
-              <div class="share-price-box">
-                <p class="share-price">999 $</p>
-                <p class="share-price-actualy">1200 $</p>
+              <h3 class="shares__name">Smartphone Apple iPhone 13 128GB</h3>
+              <div class="shares__price-box">
+                <p class="shares__price shares__price--discount">999 $</p>
+                <p class="shares__price shares__price--original">1200 $</p>
               </div>
-              <div class="share-like-box">
-                <p class="share-stock">In stock</p>
-                <div class="bgr-svg">
-                  <svg class="share-like" width="21" height="17px">
-                    <use href="./images/sprite.svg#heart"></use>
-                  </svg>
-                </div>
+              <div class="shares__info">
+                <p class="shares__stock">In stock</p>
+                <svg class="shares__like-icon" width="21" height="17px">
+                  <use href="./images/sprite.svg#heart"></use>
+                </svg>
               </div>
-              <button class="share-button" type="button">To Cart</button>
+              <button class="shares__button" type="button">To Cart</button>
             </li>
           </ul>
         </div>
       </section>
     </main>
-    <!-- MODAL -->
-    <div class="modal-overlay" id="modal-catalog">
+
+    <!-- MODAL CATALOG -->
+    <div class="modal__overlay" id="modal-catalog">
       <div class="modal">
-        <div class="container-row">
-          <form action="" class="input-box modal-search">
-            <label for="search-input " class="visually-hidden">Search</label>
+        <form action="" class="modal__search-form">
+          <div class="modal__search-wrapper">
+            <label for="search-input" class="visually-hidden">Search</label>
             <input
-              class="search modal-search-input"
+              class="modal__search-input"
               type="text"
               placeholder="Search"
             />
-            <button class="bgr-svg-modal">
-              <svg class="modal-svg-search" width="20" height="20">
+            <button class="modal__search-button">
+              <svg class="modal__search-icon" width="20" height="20">
                 <use href="./images/sprite.svg#search"></use>
               </svg>
             </button>
-          </form>
-        </div>
-        <ul class="modal-catalog-list">
-          <li class="modal-catalog-item">
+          </div>
+        </form>
+        <ul class="modal__catalog-list">
+          <li class="modal__catalog-item">
             <a
               href="./catalog.html"
-              class="modal-catalog-link"
+              class="modal__catalog-link modal__catalog-link--smartphone"
               id="smartphone-link"
             >
-              <svg class="modal-catalog-svg" width="20" height="20">
+              <svg class="modal__catalog-icon" width="20" height="20">
                 <use href="./images/sprite.svg#smartphone"></use>
               </svg>
               Smartphones & Mobile Phones
-              <svg class="modal-catalog-svg-2" width="20" height="20">
-                <use href="./images/sprite.svg#arrow"></use></svg
-            ></a>
+              <svg class="modal__catalog-arrow" width="20" height="20">
+                <use href="./images/sprite.svg#arrow"></use>
+              </svg>
+            </a>
           </li>
-          <li class="modal-catalog-item">
-            <a href="" class="modal-catalog-link" id="watch-link">
-              <svg class="modal-catalog-svg" width="20" height="20">
+          <li class="modal__catalog-item">
+            <a
+              href=""
+              class="modal__catalog-link modal__catalog-link--watch"
+              id="watch-link"
+            >
+              <svg class="modal__catalog-icon" width="20" height="20">
                 <use href="./images/sprite.svg#watch"></use>
               </svg>
               Smartwatches & Wearables
-              <svg class="modal-catalog-svg-2" width="20" height="20">
-                <use href="./images/sprite.svg#arrow"></use></svg
-            ></a>
+              <svg class="modal__catalog-arrow" width="20" height="20">
+                <use href="./images/sprite.svg#arrow"></use>
+              </svg>
+            </a>
           </li>
-          <li class="modal-catalog-item">
-            <a href="" class="modal-catalog-link" id="tv-link">
-              <svg class="modal-catalog-svg" width="20" height="20">
+          <li class="modal__catalog-item">
+            <a
+              href=""
+              class="modal__catalog-link modal__catalog-link--tv"
+              id="tv-link"
+            >
+              <svg class="modal__catalog-icon" width="20" height="20">
                 <use href="./images/sprite.svg#tv"></use>
               </svg>
               TVs & Accessories
-              <svg class="modal-catalog-svg-2" width="20" height="20">
-                <use href="./images/sprite.svg#arrow"></use></svg
-            ></a>
+              <svg class="modal__catalog-arrow" width="20" height="20">
+                <use href="./images/sprite.svg#arrow"></use>
+              </svg>
+            </a>
           </li>
-          <li class="modal-catalog-item">
-            <a href="" class="modal-catalog-link" id="audio-link">
-              <svg class="modal-catalog-svg" width="20" height="20">
+          <li class="modal__catalog-item">
+            <a
+              href=""
+              class="modal__catalog-link modal__catalog-link--audio"
+              id="audio-link"
+            >
+              <svg class="modal__catalog-icon" width="20" height="20">
                 <use href="./images/sprite.svg#audio"></use>
               </svg>
               Audio & Sound Systems
-              <svg class="modal-catalog-svg-2" width="20" height="20">
-                <use href="./images/sprite.svg#arrow"></use></svg
-            ></a>
+              <svg class="modal__catalog-arrow" width="20" height="20">
+                <use href="./images/sprite.svg#arrow"></use>
+              </svg>
+            </a>
           </li>
-          <li class="modal-catalog-item">
-            <a href="" class="modal-catalog-link" id="hair-link">
-              <svg class="modal-catalog-svg" width="20" height="20">
+          <li class="modal__catalog-item">
+            <a
+              href=""
+              class="modal__catalog-link modal__catalog-link--hair"
+              id="hair-link"
+            >
+              <svg class="modal__catalog-icon" width="20" height="20">
                 <use href="./images/sprite.svg#hair"></use>
               </svg>
               Hair Dryers & Styling Tools
-              <svg class="modal-catalog-svg-2" width="20" height="20">
-                <use href="./images/sprite.svg#arrow"></use></svg
-            ></a>
+              <svg class="modal__catalog-arrow" width="20" height="20">
+                <use href="./images/sprite.svg#arrow"></use>
+              </svg>
+            </a>
           </li>
-          <li class="modal-catalog-item">
-            <a href="" class="modal-catalog-link" id="console-link">
-              <svg class="modal-catalog-svg" width="20" height="20">
+          <li class="modal__catalog-item">
+            <a
+              href=""
+              class="modal__catalog-link modal__catalog-link--console"
+              id="console-link"
+            >
+              <svg class="modal__catalog-icon" width="20" height="20">
                 <use href="./images/sprite.svg#console"></use>
               </svg>
               Gaming Consoles & Accessories
-              <svg class="modal-catalog-svg-2" width="20" height="20">
-                <use href="./images/sprite.svg#arrow"></use></svg
-            ></a>
+              <svg class="modal__catalog-arrow" width="20" height="20">
+                <use href="./images/sprite.svg#arrow"></use>
+              </svg>
+            </a>
           </li>
-          <li class="modal-catalog-item">
-            <a href="" class="modal-catalog-link" id="oven-link">
-              <svg class="modal-catalog-svg" width="20" height="20">
+          <li class="modal__catalog-item">
+            <a
+              href=""
+              class="modal__catalog-link modal__catalog-link--oven"
+              id="oven-link"
+            >
+              <svg class="modal__catalog-icon" width="20" height="20">
                 <use href="./images/sprite.svg#oven"></use>
               </svg>
               Stoves & Cooktops
-              <svg class="modal-catalog-svg-2" width="20" height="20">
+              <svg class="modal__catalog-arrow" width="20" height="20">
                 <use href="./images/sprite.svg#arrow"></use>
               </svg>
             </a>
           </li>
-          <li class="modal-catalog-item">
-            <a href="" class="modal-catalog-link" id="travel-link">
-              <svg class="modal-catalog-svg" width="20" height="20">
+          <li class="modal__catalog-item">
+            <a
+              href=""
+              class="modal__catalog-link modal__catalog-link--travel"
+              id="travel-link"
+            >
+              <svg class="modal__catalog-icon" width="20" height="20">
                 <use href="./images/sprite.svg#travel"></use>
               </svg>
               Tourism & Travel
-              <svg class="modal-catalog-svg-2" width="20" height="20">
+              <svg class="modal__catalog-arrow" width="20" height="20">
                 <use href="./images/sprite.svg#arrow"></use>
               </svg>
             </a>
           </li>
-          <li class="modal-catalog-item">
-            <a href="" class="modal-catalog-link" id="home-living-link">
-              <svg class="modal-catalog-svg" width="20" height="20">
+          <li class="modal__catalog-item">
+            <a
+              href=""
+              class="modal__catalog-link modal__catalog-link--home-living"
+              id="home-living-link"
+            >
+              <svg class="modal__catalog-icon" width="20" height="20">
                 <use href="./images/sprite.svg#home-living"></use>
               </svg>
               Home & Living
-              <svg class="modal-catalog-svg-2" width="20" height="20">
+              <svg class="modal__catalog-arrow" width="20" height="20">
                 <use href="./images/sprite.svg#arrow"></use>
               </svg>
             </a>
           </li>
-          <li class="modal-catalog-item">
-            <a href="" class="modal-catalog-link" id="children-link">
-              <svg class="modal-catalog-svg" width="20" height="20">
+          <li class="modal__catalog-item">
+            <a
+              href=""
+              class="modal__catalog-link modal__catalog-link--children"
+              id="children-link"
+            >
+              <svg class="modal__catalog-icon" width="20" height="20">
                 <use href="./images/sprite.svg#children"></use>
               </svg>
               Children's Products
-              <svg class="modal-catalog-svg-2" width="20" height="20">
+              <svg class="modal__catalog-arrow" width="20" height="20">
                 <use href="./images/sprite.svg#arrow"></use>
               </svg>
             </a>
           </li>
-          <li class="modal-catalog-item">
-            <a href="" class="modal-catalog-link" id="perfumes-link">
-              <svg class="modal-catalog-svg" width="20" height="20">
+          <li class="modal__catalog-item">
+            <a
+              href=""
+              class="modal__catalog-link modal__catalog-link--perfumes"
+              id="perfumes-link"
+            >
+              <svg class="modal__catalog-icon" width="20" height="20">
                 <use href="./images/sprite.svg#perfumes"></use>
               </svg>
               Perfumes & Fragrances
-              <svg class="modal-catalog-svg-2" width="20" height="20">
+              <svg class="modal__catalog-arrow" width="20" height="20">
                 <use href="./images/sprite.svg#arrow"></use>
               </svg>
             </a>
           </li>
-          <li class="modal-catalog-item">
-            <a href="" class="modal-catalog-link" id="sale-link">
-              <svg class="modal-catalog-svg" width="20" height="20">
+          <li class="modal__catalog-item">
+            <a
+              href=""
+              class="modal__catalog-link modal__catalog-link--sale"
+              id="sale-link"
+            >
+              <svg class="modal__catalog-icon" width="20" height="20">
                 <use href="./images/sprite.svg#sale"></use>
               </svg>
               Sales & Promotions
-              <svg class="modal-catalog-svg-2" width="20" height="20">
+              <svg class="modal__catalog-arrow" width="20" height="20">
                 <use href="./images/sprite.svg#arrow"></use>
               </svg>
             </a>
@@ -583,38 +619,67 @@
         </ul>
       </div>
     </div>
-    <!-- MENU -->
+
+    <!-- MOBILE MENU -->
     <div class="menu">
       <div class="container">
-        <nav class="navigation">
-          <ul class="nav-list">
-            <li class="nav-item">
-              <a href="./index.html" class="nav-link" id="home-link">
-                <svg class="nav-icon" width="20" height="20">
+        <nav class="menu__navigation">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a
+                href="./index.html"
+                class="menu__link menu__link--home"
+                id="home-link"
+              >
+                <svg class="menu__icon menu__icon--home" width="20" height="20">
                   <use href="./images/sprite.svg#home"></use>
                 </svg>
                 Home
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" id="catalog-link">
-                <svg class="nav-icon" width="20" height="20">
+            <li class="menu__item">
+              <a
+                href="#"
+                class="menu__link menu__link--catalog"
+                id="catalog-link"
+              >
+                <svg
+                  class="menu__icon menu__icon--catalog"
+                  width="20"
+                  height="20"
+                >
                   <use href="./images/sprite.svg#catalog"></use>
                 </svg>
                 Catalog
               </a>
             </li>
-            <li class="nav-item">
-              <a href="" class="nav-link" id="basket-link">
-                <svg class="nav-icon" width="20" height="20">
+            <li class="menu__item">
+              <a
+                href="#"
+                class="menu__link menu__link--basket"
+                id="basket-link"
+              >
+                <svg
+                  class="menu__icon menu__icon--basket"
+                  width="20"
+                  height="20"
+                >
                   <use href="./images/sprite.svg#basket"></use>
                 </svg>
                 Basket
               </a>
             </li>
-            <li class="nav-item">
-              <a href="" class="nav-link" id="profile-link">
-                <svg class="nav-icon" width="20" height="20">
+            <li class="menu__item">
+              <a
+                href="#"
+                class="menu__link menu__link--profile"
+                id="profile-link"
+              >
+                <svg
+                  class="menu__icon menu__icon--profile"
+                  width="20"
+                  height="20"
+                >
                   <use href="./images/sprite.svg#profile"></use>
                 </svg>
                 Profile
@@ -624,7 +689,8 @@
         </nav>
       </div>
     </div>
+
     <script type="module" src="./js/app.js"></script>
-    <script type="module" src="./js/weq.js"></script>
+    <script type="module" src="./js/catalog.js"></script>
   </body>
 </html>

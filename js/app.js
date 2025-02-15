@@ -1,45 +1,42 @@
-const link = document.querySelector("#catalog-link");
-const modalCatalog = document.querySelector(".modal-overlay");
-const homeLink = document.querySelector("#home-link");
-const catalogLinkEl = document.querySelectorAll(".catalog-link");
+const catalogLinkEl = document.querySelector("#catalog-link");
+const homeLinkEl = document.querySelector("#home-link");
+const modalCatalogEl = document.querySelector(".modal__overlay");
+const catalogLinksEl = document.querySelectorAll(".catalog-link");
+console.log("catalogLinksEl:", catalogLinksEl);
 const catalogNameEl = document.querySelector(".filter-title");
+const currentPathEl = window.location.pathname;
 
-link.addEventListener("click", (event) => {
-  event.preventDefault();
-  modalCatalog.scrollTop = 0;
-  if (modalCatalog.classList.contains("menu-is-open")) {
-    document.body.style.overflow = "auto";
-  } else {
-    document.body.style.overflow = "hidden";
-  }
+catalogLinkEl.addEventListener("click", handleCatalogClick);
+homeLinkEl.addEventListener("click", closeCatalog);
+catalogLinksEl.forEach((link) =>
+  link.addEventListener("click", handleCatalogSelection)
+);
 
-  modalCatalog.classList.toggle("menu-is-open");
-});
+function openModal() {
+  modalCatalogEl.scrollTop = 0;
+  modalCatalogEl.classList.toggle("menu__is-open");
+  document.body.style.overflow = modalCatalogEl.classList.contains(
+    "menu__is-open"
+  )
+    ? "hidden"
+    : "auto";
+}
 
-homeLink.addEventListener("click", (event) => {
-  event.preventDefault();
-
+function closeCatalog() {
+  modalCatalogEl.classList.remove("menu__is-open");
   document.body.style.overflow = "auto";
+}
 
-  modalCatalog.classList.remove("menu-is-open");
-});
+function handleCatalogClick(event) {
+  event.preventDefault();
+  openModal();
+}
 
-let catalogName = "";
+function handleCatalogSelection(event) {
+  const selectedLinkEl = event.target.closest("a");
+  if (!selectedLinkEl) return;
 
-catalogLinkEl.forEach((link) => {
-  link.addEventListener("click", (event) => {
-    catalogName = event.target.closest("a").textContent.trim();
-
-    localStorage.setItem("selectedCatalog", catalogName);
-
-    catalogNameEl.textContent = catalogName;
-  });
-});
-
-window.addEventListener("DOMContentLoaded", () => {
-  const catalogName = localStorage.getItem("selectedCatalog");
-
-  if (catalogName) {
-    catalogNameEl.textContent = catalogName;
-  }
-});
+  const catalogName = selectedLinkEl.textContent.trim();
+  localStorage.setItem("selectedCatalog", catalogName);
+  catalogNameEl.textContent = catalogName;
+}
