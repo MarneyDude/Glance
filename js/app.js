@@ -189,7 +189,7 @@ function openCatalogLink(event) {
   localStorage.setItem("category", event.target.dataset.name);
   localStorage.setItem("categoryTitle", event.target.textContent.trim());
 
-  window.location.href = "/catalog.html";
+  window.location.href = "./catalog.html";
 }
 
 function openMenuLink(event) {
