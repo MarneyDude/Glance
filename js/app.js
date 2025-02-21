@@ -177,10 +177,8 @@ const modalCatalogEl = document.querySelector(".js-modal-catalog");
 const modalCatalogButtonEl = document.querySelector(".js-catalog-button");
 const sharesListEl = document.querySelector("#js-shares-list");
 const catalogListEl = document.querySelector("#js-catalog-list");
-if (window.location.pathname === "/index.html") {
-  modalCatalogButtonEl.addEventListener("click", openMenuLink);
-  catalogListEl.addEventListener("click", openCatalogLink);
-}
+modalCatalogButtonEl.addEventListener("click", openMenuLink);
+catalogListEl.addEventListener("click", openCatalogLink);
 menuLinksEl.addEventListener("click", openMenuLink);
 
 renderingShares();
@@ -274,9 +272,7 @@ function renderingShares() {
     })
     .join("");
 
-  if (window.location.pathname.includes("index.html")) {
-    sharesListEl.insertAdjacentHTML("afterbegin", markup);
-  }
+  sharesListEl.insertAdjacentHTML("afterbegin", markup);
 }
 
 function calculateDiscount(price, discountPercentage) {
