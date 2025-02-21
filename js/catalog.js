@@ -53,7 +53,7 @@ const catalog = {
       colors: ["White", "Black", "Green"],
       features: ["5G", "OLED Display", "Google Assistant"],
       photo:
-        "https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://cdn.comfy.ua/media/catalog/product/_/8/_8.29_.jpg/w_320",
+        "https://cdn.comfy.ua/media/catalog/product/cache/5/small_image/270x265/62defc7f46f3fbfc8afcd112227d1181/_/8/_8.29_.jpg",
     },
   ],
   smartWatches: [
