@@ -74,7 +74,7 @@ p {
 
 .section {
   background-color: whitesmoke;
-  padding: 20px 0;
+  padding: 10px 0;
 }
 /* #endregion COMMON */
 
@@ -147,7 +147,6 @@ p {
 .sales {
   display: flex;
   justify-content: center;
-  padding-top: 40px;
 }
 
 .sales__list {
@@ -163,6 +162,7 @@ p {
 
 .sales__item {
   min-width: 160px;
+  max-height: 220px
   padding: 8px;
   display: flex;
   scroll-snap-align: start;
