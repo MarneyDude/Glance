@@ -205,7 +205,7 @@ function openMenuLink(event) {
     if (modalCatalogEl.classList.contains("menu__is-open")) {
       modalCatalogEl.classList.remove("menu__is-open");
       setTimeout(function () {
-        window.location.href = "./index.html";
+        window.location.href = "/Glance/index.html";
       }, 200);
     }
   } else if (catalogLink || event.target === modalCatalogButtonEl) {
