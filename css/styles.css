@@ -460,8 +460,8 @@ p {
   padding: 15px;
   background-color: white;
   display: flex;
-  justify-content: flex-start;
   gap: 20px;
+  justify-content: flex-start;
   border-top: 1px solid rgb(0, 161, 201);
 }
 .product-title {
@@ -473,7 +473,7 @@ p {
 }
 
 .product-box {
-  min-width: 200px;
+  width: 200px;
   display: flex;
   flex-direction: column;
   gap: 15px;
