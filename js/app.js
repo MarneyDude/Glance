@@ -177,7 +177,7 @@ const modalCatalogEl = document.querySelector(".js-modal-catalog");
 const modalCatalogButtonEl = document.querySelector(".js-catalog-button");
 const sharesListEl = document.querySelector("#js-shares-list");
 const catalogListEl = document.querySelector("#js-catalog-list");
-if (window.location.pathname === "./index.html") {
+if (window.location.pathname === "/index.html") {
   modalCatalogButtonEl.addEventListener("click", openMenuLink);
   catalogListEl.addEventListener("click", openCatalogLink);
 }
@@ -191,7 +191,7 @@ function openCatalogLink(event) {
   localStorage.setItem("category", event.target.dataset.name);
   localStorage.setItem("categoryTitle", event.target.textContent.trim());
 
-  window.location.href = "./catalog.html";
+  window.location.href = "/catalog.html";
 }
 
 function openMenuLink(event) {
