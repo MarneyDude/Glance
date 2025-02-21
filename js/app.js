@@ -177,7 +177,7 @@ const modalCatalogEl = document.querySelector(".js-modal-catalog");
 const modalCatalogButtonEl = document.querySelector(".js-catalog-button");
 const sharesListEl = document.querySelector("#js-shares-list");
 const catalogListEl = document.querySelector("#js-catalog-list");
-if (window.location.pathname === "index.html") {
+if (window.location.pathname === "/index.html") {
   modalCatalogButtonEl.addEventListener("click", openMenuLink);
   catalogListEl.addEventListener("click", openCatalogLink);
 }
@@ -191,7 +191,7 @@ function openCatalogLink(event) {
   localStorage.setItem("category", event.target.dataset.name);
   localStorage.setItem("categoryTitle", event.target.textContent.trim());
 
-  window.location.href = "catalog.html";
+  window.location.href = "/catalog.html";
 }
 
 function openMenuLink(event) {
@@ -207,7 +207,7 @@ function openMenuLink(event) {
     if (modalCatalogEl.classList.contains("menu__is-open")) {
       modalCatalogEl.classList.remove("menu__is-open");
       setTimeout(function () {
-        window.location.href = "index.html";
+        window.location.href = "./index.html";
       }, 200);
     }
   } else if (catalogLink || event.target === modalCatalogButtonEl) {
@@ -274,7 +274,7 @@ function renderingShares() {
     })
     .join("");
 
-  if (window.location.pathname === "index.html") {
+  if (window.location.pathname === "/index.html") {
     sharesListEl.insertAdjacentHTML("afterbegin", markup);
   }
 }
