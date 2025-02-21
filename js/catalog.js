@@ -173,6 +173,11 @@ const catalog = {
 };
 const categoryTitle = document.querySelector("#js-filter-title");
 const productsListEl = document.querySelector(".js-products-list");
+const menuLinksEl = document.querySelector(".js-menu-list");
+const modalCatalogEl = document.querySelector(".js-modal-catalog");
+const catalogListEl = document.querySelector("#js-catalog-list");
+
+menuLinksEl.addEventListener("click", openMenuLink);
 
 document.addEventListener("DOMContentLoaded", renderingCategory);
 const category = localStorage.getItem("category");
@@ -214,7 +219,7 @@ function renderingCategory(category) {
               </div>
               <div class="product-box">
                 <h3 class="product-title">${`${brand} ${model}`}</h3>
-                  <p class="product-about">${features.join(",")}</p>
+                  <p class="product-about">${features.join(", ")}</p>
                 <div class="stock-price">
                   <p class="item-stock share-stock">In stock</p>
                   <p class="item-price share-price">${price} $</p>
@@ -235,8 +240,6 @@ function renderingCategory(category) {
       .join("");
 
     productsListEl.insertAdjacentHTML("afterbegin", markup);
-  } else {
-    console.log("Категорія не знайдена!");
   }
 }
 
@@ -245,4 +248,38 @@ function calculateDiscount(price, discountPercentage) {
   const discountAmount = (price * discountPercentage) / 100;
   const discountedPrice = price - discountAmount;
   return Math.round(discountedPrice);
+}
+
+function openMenuLink(event) {
+  event.preventDefault();
+  const homeLink = event.target.classList.contains("menu__link--home");
+  const catalogLink = event.target.classList.contains("menu__link--catalog");
+  console.log(" catalogLink:", catalogLink);
+  const basketLink = event.target.classList.contains("menu__link--basket");
+  const profileLink = event.target.classList.contains("menu__link--profile");
+
+  let wasCatalogOpen = modalCatalogEl.classList.contains("menu__is-open");
+
+  if (homeLink) {
+    if (modalCatalogEl.classList.contains("menu__is-open")) {
+      modalCatalogEl.classList.remove("menu__is-open");
+      setTimeout(function () {
+        window.location.href = "/Glance/index.html";
+      }, 200);
+    }
+  } else if (catalogLink || event.target === modalCatalogButtonEl) {
+    modalCatalogEl.classList.toggle("menu__is-open");
+  } else if (basketLink) {
+    console.log("basketPage");
+  } else if (profileLink) {
+    console.log("profilePage");
+  }
+
+  if (wasCatalogOpen !== modalCatalogEl.classList.contains("menu__is-open")) {
+    document.body.style.overflow = modalCatalogEl.classList.contains(
+      "menu__is-open"
+    )
+      ? "hidden"
+      : "auto";
+  }
 }

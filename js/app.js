@@ -172,7 +172,7 @@ const catalog = {
   ],
 };
 
-const menuLinksEl = document.querySelector("#js-menu-list");
+const menuLinksEl = document.querySelector(".js-menu-list");
 const modalCatalogEl = document.querySelector(".js-modal-catalog");
 const modalCatalogButtonEl = document.querySelector(".js-catalog-button");
 const sharesListEl = document.querySelector("#js-shares-list");
@@ -196,6 +196,7 @@ function openMenuLink(event) {
   event.preventDefault();
   const homeLink = event.target.classList.contains("menu__link--home");
   const catalogLink = event.target.classList.contains("menu__link--catalog");
+  console.log(" catalogLink:", catalogLink);
   const basketLink = event.target.classList.contains("menu__link--basket");
   const profileLink = event.target.classList.contains("menu__link--profile");
 
@@ -263,9 +264,10 @@ function renderingShares() {
               </div>
               <div class="shares__info">
                 <p class="shares__stock">In stock</p>
+                <div class="bgr-svg">
                 <svg class="shares__like-icon" width="21" height="17px">
                   <use href="./images/sprite.svg#heart"></use>
-                </svg>
+                </svg></div>
               </div>
               <button class="shares__button" type="button">To Cart</button>
             </li>`;

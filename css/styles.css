@@ -366,7 +366,6 @@ p {
 }
 
 .shares__like-icon use {
-  stroke: rgb(230, 45, 159);
   stroke-width: 2px;
 }
 
@@ -498,6 +497,9 @@ p {
   margin-bottom: 12px;
 }
 .product-img-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .stock-price {
