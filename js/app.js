@@ -274,7 +274,7 @@ function renderingShares() {
     })
     .join("");
 
-  if (window.location.pathname === "/index.html") {
+  if (window.location.pathname === "/Glance/index.html") {
     sharesListEl.insertAdjacentHTML("afterbegin", markup);
   }
 }
