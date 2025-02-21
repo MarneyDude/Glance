@@ -174,28 +174,56 @@ const catalog = {
 
 const menuLinksEl = document.querySelector("#js-menu-list");
 const modalCatalogEl = document.querySelector(".js-modal-catalog");
+const modalCatalogButtonEl = document.querySelector(".js-catalog-button");
 const sharesListEl = document.querySelector("#js-shares-list");
+const catalogListEl = document.querySelector("#js-catalog-list");
+if (window.location.pathname === "/index.html") {
+  modalCatalogButtonEl.addEventListener("click", openMenuLink);
+  catalogListEl.addEventListener("click", openCatalogLink);
+}
+menuLinksEl.addEventListener("click", openMenuLink);
 
-menuLinksEl.addEventListener("click", openLink);
 renderingShares();
 
-function openLink(event) {
+function openCatalogLink(event) {
+  event.preventDefault();
+  console.log();
+  localStorage.setItem("category", event.target.dataset.name);
+  localStorage.setItem("categoryTitle", event.target.textContent.trim());
+
+  window.location.href = "/catalog.html";
+}
+
+function openMenuLink(event) {
   event.preventDefault();
   const homeLink = event.target.classList.contains("menu__link--home");
   const catalogLink = event.target.classList.contains("menu__link--catalog");
   const basketLink = event.target.classList.contains("menu__link--basket");
   const profileLink = event.target.classList.contains("menu__link--profile");
 
+  let wasCatalogOpen = modalCatalogEl.classList.contains("menu__is-open");
+
   if (homeLink) {
     if (modalCatalogEl.classList.contains("menu__is-open")) {
       modalCatalogEl.classList.remove("menu__is-open");
+      setTimeout(function () {
+        window.location.href = "./index.html";
+      }, 200);
     }
-  } else if (catalogLink) {
+  } else if (catalogLink || event.target === modalCatalogButtonEl) {
     modalCatalogEl.classList.toggle("menu__is-open");
   } else if (basketLink) {
     console.log("basketPage");
   } else if (profileLink) {
     console.log("profilePage");
+  }
+
+  if (wasCatalogOpen !== modalCatalogEl.classList.contains("menu__is-open")) {
+    document.body.style.overflow = modalCatalogEl.classList.contains(
+      "menu__is-open"
+    )
+      ? "hidden"
+      : "auto";
   }
 }
 
@@ -208,7 +236,7 @@ function renderingShares() {
         price,
         discountPercentage,
         quantity,
-        colors,
+        colors: [color1, color2, color3],
         features,
         photo,
       } = phone;
@@ -220,13 +248,13 @@ function renderingShares() {
               <img class="shares__image" src="${photo}" alt="phone" />
               <ul class="shares__color-list">
                 <li class="shares__color-item">
-                  <a href="#" class="shares__color-link"></a>
+                  <a href="#" class="shares__color-link" data-color = "${color1}"></a>
                 </li>
                 <li class="shares__color-item">
-                  <a href="#" class="shares__color-link"></a>
+                  <a href="#" class="shares__color-link" data-color = "${color2}"></a>
                 </li>
                 <li class="shares__color-item">
-                  <a href="#" class="shares__color-link"></a>
+                  <a href="#" class="shares__color-link" data-color = "${color3}"></a>
                 </li>
               </ul>
             </div>
@@ -246,7 +274,9 @@ function renderingShares() {
     })
     .join("");
 
-  sharesListEl.insertAdjacentHTML("afterbegin", markup);
+  if (window.location.pathname === "/index.html") {
+    sharesListEl.insertAdjacentHTML("afterbegin", markup);
+  }
 }
 
 function calculateDiscount(price, discountPercentage) {

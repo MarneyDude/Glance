@@ -31,35 +31,35 @@ const catalog = {
       colors: ["Silver", "Black", "Blue"],
       features: ["5G", "OLED Display", "Fast Charging"],
       photo:
-        "https://i.allo.ua/media/catalog/product/cache/3/small_image/212x184/9df78eab33525d08d6e5fb8d27136e95/1/1/11111_7.jpg ",
+        "https://cdn.comfy.ua/media/catalog/product/cache/5/small_image/270x265/62defc7f46f3fbfc8afcd112227d1181/_/8/_8_45_.jpg",
     },
     {
       brand: "OnePlus",
-      model: "OnePlus 11",
+      model: "9 Pro",
       price: 799,
       discountPercentage: 6, // Знижка 6%
       quantity: 80,
       colors: ["Black", "Silver", "Green"],
       features: ["5G", "Fluid AMOLED Display", "Fast Charging"],
       photo:
-        "https://i.allo.ua/media/catalog/product/cache/3/small_image/212x184/9df78eab33525d08d6e5fb8d27136e95/import/4978120413352997.webp",
+        "https://cdn.comfy.ua/media/catalog/product/cache/5/small_image/270x265/62defc7f46f3fbfc8afcd112227d1181/6/0/60ee98bb73879_9pro-morning-mist-02-rgb_1_.jpg",
     },
     {
-      brand: "Google",
-      model: "Pixel 7",
+      brand: "Poco",
+      model: "X7 Pro 8",
       price: 599,
       discountPercentage: 8, // Знижка 8%
       quantity: 60,
       colors: ["White", "Black", "Green"],
       features: ["5G", "OLED Display", "Google Assistant"],
       photo:
-        "https://i.allo.ua/media/catalog/product/cache/3/small_image/212x184/9df78eab33525d08d6e5fb8d27136e95/import/5033195512300116.webp",
+        "https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://cdn.comfy.ua/media/catalog/product/_/8/_8.29_.jpg/w_320",
     },
   ],
   smartWatches: [
     {
       brand: "Apple",
-      model: "Apple Watch 5",
+      model: "Watch 5",
       price: 399,
       discountPercentage: 10, // Знижка 10%
       quantity: 40,
@@ -171,3 +171,78 @@ const catalog = {
     },
   ],
 };
+const categoryTitle = document.querySelector("#js-filter-title");
+const productsListEl = document.querySelector(".js-products-list");
+
+document.addEventListener("DOMContentLoaded", renderingCategory);
+const category = localStorage.getItem("category");
+const categoryName = localStorage.getItem("categoryTitle");
+
+categoryTitle.textContent = categoryName;
+
+renderingCategory(category);
+
+function renderingCategory(category) {
+  const products = catalog[category];
+
+  // Якщо категорія існує
+  if (products) {
+    let markup = products
+      .map((product) => {
+        const {
+          brand,
+          model,
+          price,
+          discountPercentage,
+          quantity,
+          colors,
+          features,
+          photo,
+        } = product;
+
+        // Обчислюємо знижку
+        const discountPrice = calculateDiscount(price, discountPercentage);
+
+        return `<li class="products-item">
+              <div class="product-img-box">
+                <img class="product-img" src="${photo}" alt="phone" />
+                <ul class="share-radio-set">
+                  <li class="share-radio-item"><a href=""></a></li>
+                  <li class="share-radio-item"><a href=""></a></li>
+                  <li class="share-radio-item"><a href=""></a></li>
+                </ul>
+              </div>
+              <div class="product-box">
+                <h3 class="product-title">${`${brand} ${model}`}</h3>
+                  <p class="product-about">${features.join(",")}</p>
+                <div class="stock-price">
+                  <p class="item-stock share-stock">In stock</p>
+                  <p class="item-price share-price">${price} $</p>
+                </div>
+                <div class="item-basket-box">
+                  <div class="bgr-svg">
+                    <svg width="21" height="21">
+                      <use href="./images/sprite.svg#heart"></use>
+                    </svg>
+                  </div>
+                  <button class="share-button btn" type="button">
+                    To cart
+                  </button>
+                </div>
+              </div>
+            </li>`;
+      })
+      .join("");
+
+    productsListEl.insertAdjacentHTML("afterbegin", markup);
+  } else {
+    console.log("Категорія не знайдена!");
+  }
+}
+
+// Функція для обчислення ціни зі знижкою
+function calculateDiscount(price, discountPercentage) {
+  const discountAmount = (price * discountPercentage) / 100;
+  const discountedPrice = price - discountAmount;
+  return Math.round(discountedPrice);
+}

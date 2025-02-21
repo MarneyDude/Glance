@@ -83,7 +83,7 @@
                 <use href="./images/sprite.svg#back"></use>
               </svg>
             </a>
-            <h2 class="filter-title">Smartphones</h2>
+            <h2 class="filter-title" id="js-filter-title"></h2>
           </div>
           <ul class="filter-box">
             <li class="filter-item-box-1">
@@ -102,106 +102,7 @@
       </section>
       <!-- CATEGORY PRODUCTS -->
       <section class="category-products">
-        <div class="container">
-          <ul class="products-list">
-            <li class="products-item">
-              <div class="product-img-box">
-                <img class="product-img" src="./images/img-1.png" alt="phone" />
-                <ul class="share-radio-set">
-                  <li class="share-radio-item"><a href=""></a></li>
-                  <li class="share-radio-item"><a href=""></a></li>
-                  <li class="share-radio-item"><a href=""></a></li>
-                </ul>
-              </div>
-              <div class="product-box">
-                <h3 class="product-title">Smartphone Apple iPhone 14 128GB</h3>
-                <ul class="about-list">
-                  <li class="about-item">Screen: 6.1"/2532x1170</li>
-                  <li class="about-item">Number of cores:: 6</li>
-                  <li class="about-item">Power supply unit: 20 W</li>
-                </ul>
-                <div class="stock-price">
-                  <p class="item-stock share-stock">In stock</p>
-                  <p class="item-price share-price">2000 $</p>
-                </div>
-                <div class="item-basket-box">
-                  <div class="bgr-svg">
-                    <svg width="21" height="21">
-                      <use href="./images/sprite.svg#heart"></use>
-                    </svg>
-                  </div>
-                  <button class="share-button btn" type="button">
-                    To cart
-                  </button>
-                </div>
-              </div>
-            </li>
-            <li class="products-item">
-              <div class="product-img-box">
-                <img class="product-img" src="./images/img-1.png" alt="phone" />
-                <ul class="share-radio-set">
-                  <li class="share-radio-item"><a href=""></a></li>
-                  <li class="share-radio-item"><a href=""></a></li>
-                  <li class="share-radio-item"><a href=""></a></li>
-                </ul>
-              </div>
-              <div class="product-box">
-                <h3 class="product-title">Smartphone Apple iPhone 13 128GB</h3>
-                <ul class="about-list">
-                  <li class="about-item">Screen: 6.1"/2532x1170</li>
-                  <li class="about-item">Number of cores:: 6</li>
-                  <li class="about-item">Power supply unit: 20 W</li>
-                </ul>
-                <div class="stock-price">
-                  <p class="item-stock share-stock">In stock</p>
-                  <p class="item-price share-price">2000 $</p>
-                </div>
-                <div class="item-basket-box">
-                  <div class="bgr-svg">
-                    <svg width="21" height="21">
-                      <use href="./images/sprite.svg#heart"></use>
-                    </svg>
-                  </div>
-                  <button class="share-button btn" type="button">
-                    To cart
-                  </button>
-                </div>
-              </div>
-            </li>
-            <li class="products-item">
-              <div class="product-img-box">
-                <img class="product-img" src="./images/img-3.png" alt="phone" />
-                <ul class="share-radio-set">
-                  <li class="share-radio-item"><a href=""></a></li>
-                  <li class="share-radio-item"><a href=""></a></li>
-                  <li class="share-radio-item"><a href=""></a></li>
-                </ul>
-              </div>
-              <div class="product-box">
-                <h3 class="product-title">Smartphone HONOR X8A 6/128GB</h3>
-                <ul class="about-list">
-                  <li class="about-item">Screen: 6.1"/2532x1170</li>
-                  <li class="about-item">Number of cores:: 6</li>
-                  <li class="about-item">Power supply unit: 20 W</li>
-                </ul>
-                <div class="stock-price">
-                  <p class="item-stock share-stock">In stock</p>
-                  <p class="item-price share-price">2000 $</p>
-                </div>
-                <div class="item-basket-box">
-                  <div class="bgr-svg">
-                    <svg width="21" height="21">
-                      <use href="./images/sprite.svg#heart"></use>
-                    </svg>
-                  </div>
-                  <button class="share-button btn" type="button">
-                    To cart
-                  </button>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
+        <ul class="products-list js-products-list"></ul>
       </section>
     </main>
 
@@ -414,7 +315,7 @@
     <div class="menu">
       <div class="container">
         <nav class="menu__navigation">
-          <ul class="menu__list">
+          <ul class="menu__list" id="js-menu-list">
             <li class="menu__item">
               <a
                 href="./index.html"
