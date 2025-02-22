@@ -172,7 +172,8 @@ const catalog = {
   ],
 };
 const categoryTitle = document.querySelector("#js-filter-title");
-const productsListEl = document.querySelector(".js-products-list");
+const productsListEl = document.querySelector("#js-products-list");
+console.log(" productsListEl:", productsListEl);
 const menuLinksEl = document.querySelector(".js-menu-list");
 const modalCatalogEl = document.querySelector(".js-modal-catalog");
 const catalogListEl = document.querySelector("#js-catalog-list");
@@ -208,34 +209,59 @@ function renderingCategory(category) {
         // Обчислюємо знижку
         const discountPrice = calculateDiscount(price, discountPercentage);
 
-        return `<li class="products-item">
-              <div class="product-img-box">
-                <img class="product-img" src="${photo}" alt="phone" />
-                <ul class="share-radio-set">
-                  <li class="share-radio-item"><a href=""></a></li>
-                  <li class="share-radio-item"><a href=""></a></li>
-                  <li class="share-radio-item"><a href=""></a></li>
-                </ul>
-              </div>
-              <div class="product-box">
-                <h3 class="product-title">${`${brand} ${model}`}</h3>
-                  <p class="product-about">${features.join(", ")}</p>
-                <div class="stock-price">
-                  <p class="item-stock share-stock">In stock</p>
-                  <p class="item-price share-price">${price} $</p>
-                </div>
-                <div class="item-basket-box">
-                  <div class="bgr-svg">
-                    <svg width="21" height="21">
-                      <use href="./images/sprite.svg#heart"></use>
-                    </svg>
-                  </div>
-                  <button class="share-button btn" type="button">
-                    To cart
-                  </button>
-                </div>
-              </div>
-            </li>`;
+        return `<li class="shares__item">
+          <div class="shares-item-header">
+            <img class="shares__image" src="${photo}" alt="phone" />
+            <ul class="shares__color-list">
+              <li class="shares__color-item">
+                <a
+                  href="#"
+                  class="shares__color-link"
+                  data-color=""
+                ></a>
+              </li>
+              <li class="shares__color-item">
+                <a
+                  href="#"
+                  class="shares__color-link"
+                  data-color=""
+                ></a>
+              </li>
+              <li class="shares__color-item">
+                <a
+                  href="#"
+                  class="shares__color-link"
+                  data-color=""
+                ></a>
+              </li>
+            </ul>
+          </div>
+          <h3 class="shares__name">${brand + " " + model}</h3>
+          <div class="shares__action">
+            <div class="shares__price-box">
+              <p class="shares__price shares__price--original">
+                ${price} $<span>${"-" + discountPercentage + "%"}</span>
+              </p>
+              <p class="shares__price shares__price--discount">
+                ${discountPrice} $
+              </p>
+            </div>
+            <div class="shares__button-box">
+        <button class="shares__button" type="submit"></button>
+        <svg class="shares-basket-btn" width="20" height="20">
+          <use href="./images/sprite.svg#basket"></use>
+        </svg>
+      </div>
+          </div>
+          <div class="shares__info">
+            <p class="shares__stock">In stock</p>
+            <div class="bgr-svg">
+              <svg class="shares__like-icon" width="21" height="17px">
+                <use href="./images/sprite.svg#heart"></use>
+              </svg>
+            </div>
+          </div>
+        </li>`;
       })
       .join("");
 

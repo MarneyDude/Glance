@@ -53,7 +53,7 @@ const catalog = {
       colors: ["White", "Black", "Green"],
       features: ["5G", "OLED Display", "Google Assistant"],
       photo:
-        "https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://cdn.comfy.ua/media/catalog/product/_/8/_8.29_.jpg/w_320",
+        "https://cdn.comfy.ua/media/catalog/product/cache/5/small_image/270x265/62defc7f46f3fbfc8afcd112227d1181/n/6/n6p_black_back_1__1.png",
     },
   ],
   smartWatches: [
@@ -173,19 +173,20 @@ const catalog = {
 };
 
 const menuLinksEl = document.querySelector(".js-menu-list");
-const modalCatalogEl = document.querySelector(".js-modal-catalog");
+const modalCatalog = document.querySelector(".js-modal-catalog");
 const modalCatalogButtonEl = document.querySelector(".js-catalog-button");
 const sharesListEl = document.querySelector("#js-shares-list");
 const catalogListEl = document.querySelector("#js-catalog-list");
+const mobileModalCatalog = document.querySelector(".js-modal__catalog-list");
 modalCatalogButtonEl.addEventListener("click", openMenuLink);
 catalogListEl.addEventListener("click", openCatalogLink);
 menuLinksEl.addEventListener("click", openMenuLink);
+mobileModalCatalog.addEventListener("click", openCatalogLink);
 
 renderingShares();
 
 function openCatalogLink(event) {
   event.preventDefault();
-  console.log();
   localStorage.setItem("category", event.target.dataset.name);
   localStorage.setItem("categoryTitle", event.target.textContent.trim());
 
@@ -200,25 +201,25 @@ function openMenuLink(event) {
   const basketLink = event.target.classList.contains("menu__link--basket");
   const profileLink = event.target.classList.contains("menu__link--profile");
 
-  let wasCatalogOpen = modalCatalogEl.classList.contains("menu__is-open");
+  let wasCatalogOpen = modalCatalog.classList.contains("menu__is-open");
 
   if (homeLink) {
-    if (modalCatalogEl.classList.contains("menu__is-open")) {
-      modalCatalogEl.classList.remove("menu__is-open");
+    if (modalCatalog.classList.contains("menu__is-open")) {
+      modalCatalog.classList.remove("menu__is-open");
       setTimeout(function () {
         window.location.href = "/Glance/index.html";
       }, 200);
     }
   } else if (catalogLink || event.target === modalCatalogButtonEl) {
-    modalCatalogEl.classList.toggle("menu__is-open");
+    modalCatalog.classList.toggle("menu__is-open");
   } else if (basketLink) {
     console.log("basketPage");
   } else if (profileLink) {
     console.log("profilePage");
   }
 
-  if (wasCatalogOpen !== modalCatalogEl.classList.contains("menu__is-open")) {
-    document.body.style.overflow = modalCatalogEl.classList.contains(
+  if (wasCatalogOpen !== modalCatalog.classList.contains("menu__is-open")) {
+    document.body.style.overflow = modalCatalog.classList.contains(
       "menu__is-open"
     )
       ? "hidden"
@@ -242,35 +243,59 @@ function renderingShares() {
 
       const discountPrice = calculateDiscount(price, discountPercentage);
 
-      return `<li class="shares__item">
-                 <div class="shares-item-header">
-              <img class="shares__image" src="${photo}" alt="phone" />
-              <ul class="shares__color-list">
-                <li class="shares__color-item">
-                  <a href="#" class="shares__color-link" data-color = "${color1}"></a>
-                </li>
-                <li class="shares__color-item">
-                  <a href="#" class="shares__color-link" data-color = "${color2}"></a>
-                </li>
-                <li class="shares__color-item">
-                  <a href="#" class="shares__color-link" data-color = "${color3}"></a>
-                </li>
-              </ul>
+      return ` <li class="shares__item">
+          <div class="shares-item-header">
+            <img class="shares__image" src="${photo}" alt="phone" />
+            <ul class="shares__color-list">
+              <li class="shares__color-item">
+                <a
+                  href="#"
+                  class="shares__color-link"
+                  data-color="${color1}"
+                ></a>
+              </li>
+              <li class="shares__color-item">
+                <a
+                  href="#"
+                  class="shares__color-link"
+                  data-color="${color2}"
+                ></a>
+              </li>
+              <li class="shares__color-item">
+                <a
+                  href="#"
+                  class="shares__color-link"
+                  data-color="${color3}"
+                ></a>
+              </li>
+            </ul>
+          </div>
+          <h3 class="shares__name">${brand + " " + model}</h3>
+          <div class="shares__action">
+            <div class="shares__price-box">
+              <p class="shares__price shares__price--original">
+                ${price} $<span>${"-" + discountPercentage + "%"}</span>
+              </p>
+              <p class="shares__price shares__price--discount">
+                ${discountPrice} $
+              </p>
             </div>
-              <h3 class="shares__name">${brand + " " + model}</h3>
-              <div class="shares__price-box">
-                <p class="shares__price shares__price--discount">${discountPrice} $</p>
-                <p class="shares__price shares__price--original">${price} $</p>
-              </div>
-              <div class="shares__info">
-                <p class="shares__stock">In stock</p>
-                <div class="bgr-svg">
-                <svg class="shares__like-icon" width="21" height="17px">
-                  <use href="./images/sprite.svg#heart"></use>
-                </svg></div>
-              </div>
-              <button class="shares__button" type="button">To Cart</button>
-            </li>`;
+            <div class="shares__button-box">
+        <button class="shares__button" type="submit"></button>
+        <svg class="shares-basket-btn" width="20" height="20">
+          <use href="./images/sprite.svg#basket"></use>
+        </svg>
+      </div>
+          </div>
+          <div class="shares__info">
+            <p class="shares__stock">In stock</p>
+            <div class="bgr-svg">
+              <svg class="shares__like-icon" width="21" height="17px">
+                <use href="./images/sprite.svg#heart"></use>
+              </svg>
+            </div>
+          </div>
+        </li>`;
     })
     .join("");
 
